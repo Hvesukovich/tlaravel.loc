@@ -15,6 +15,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/page', function () {
-    return view('page');
+Route::get('/page', function() {
+    echo '<pre>';
+    //print_r($_ENV);
+    //echo config('app.locale');
+    //echo Config::set('app.locale', 'ru');
+    //echo Config::get('app.locale');
+    //echo env('APP_ENV');
+
+    echo '<pre>';
+});
+
+/*
+Route::post('/comments', function () {
+    echo 'wefw';
+    print_r($_POST);
+});
+*/
+/*
+Route::match(['get','post'], '/comments', function () {
+    echo 'wefw';
+    print_r($_POST);
+    return;
+});
+*/
+Route::any('/comments', function () {
+    echo 'wefw';
+    print_r($_POST);
+    return;
 });
