@@ -15,6 +15,7 @@ Route::get('/', ['as' => 'home', function () {
     return view('welcome');
 }]);
 
+
 Route::get('/article/{id}', ['as' => 'article', function ($id) {
     echo $id;
 }]);
